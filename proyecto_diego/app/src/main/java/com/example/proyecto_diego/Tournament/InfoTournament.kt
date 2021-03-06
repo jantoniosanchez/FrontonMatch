@@ -41,7 +41,6 @@ class InfoTournament : Fragment() {
             openAddTournament()
         }
 
-
     }
 
     /*fun openAddTournament(){
