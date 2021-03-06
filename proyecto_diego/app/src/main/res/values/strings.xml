@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">proyecto_diego</string>
+    <string name="string_usuario_login">Usuario o correo electrónico</string>
+    <string name="string_passwrd_login">Contraseña</string>
+    <string name="pulse_aqui">Pulse aquí</string>
+    <string name="pass_forgotten">¿Has olvidado la contraseña?</string>
+    <string name="incorrect_user_login">Usuario o contraseña erroneo</string>
+    <string name="button_singin">INICIAR SESIÓN</string>
+    <string name="button_singup">REGISTRARSE</string>
+    <string name="string_nombre_usuario">Nombre de usuario</string>
+    <string name="string_mail_usuario">Correo electrónico</string>
+    <string name="string_repit_passwrd_login">Repita la contraseña</string>
+    <string name="string_terminos">Acepta los términos y condiciones de uso</string>
+    <string name="incorrect_passwrd">La contraseñas no coincide o tiene menos de 6 caracteres</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">test</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tiempo_set">Tiempo de Set en minutos</string>
+    <string name="tiempo_muerto">Tiempo muerto en minutos</string>
+    <string name="numero_partidos">Números de partidos</string>
+    <string name="numero_set">Número de set</string>
+    <string name="nombre_primer_equipo">Nombre del primer equipo</string>
+    <string name="nombre_segundo_equipo">Nombre del segundo equipo</string>
+</resources>

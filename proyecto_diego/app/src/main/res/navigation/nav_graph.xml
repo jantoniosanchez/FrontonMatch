@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logIn">
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.proyecto_diego.Login.LogIn"
+        android:label="LogIn"
+        tools:layout="@layout/screen_login">
+        <action
+            android:id="@+id/action_logIn_to_singUp"
+            app:destination="@id/singUp"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUp"
+        android:name="com.example.proyecto_diego.Login.SingUp"
+        android:label="SingUp"
+        tools:layout="@layout/screen_singup"/>
+</navigation>

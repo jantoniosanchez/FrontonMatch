@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_login"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/txtTiempoSet"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:hint=  "@string/tiempo_set"
+        android:textSize="15dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+
+
+    <EditText
+        android:id="@+id/txtTiempoMuerto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/tiempo_muerto"
+        android:textSize="15dp"
+        android:maxLength="5"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+
+
+    <EditText
+        android:id="@+id/txtNumPartidos"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_partidos"
+        android:textSize="15dp"
+        android:inputType="number"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+
+    <EditText
+        android:id="@+id/txtNumSet"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_set"
+        android:textSize="15dp"
+        android:layout_marginTop="35dp"
+        android:inputType="number"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+
+    <EditText
+        android:id="@+id/txtPrimerEquipo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_primer_equipo"
+        android:textSize="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+      <EditText
+        android:id="@+id/txtSegundoEquipo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_segundo_equipo"
+        android:textSize="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="45dp"
+        android:textStyle="bold"
+        android:textColorHint="@color/blueGrey3"
+        android:textColor="@color/white"/>
+
+
+    <Button
+        android:id="@+id/btnCrearLiga"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:text="CREAR LIGA"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/edit_text_border_2"
+        android:layout_marginTop="55dp"/>
+
+</LinearLayout>

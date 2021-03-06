@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_login"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRARSE"
+        android:layout_gravity="center"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"/>
+
+    <EditText
+        android:id="@+id/txtNameUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/string_nombre_usuario"
+        android:text="Juan"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <EditText
+        android:id="@+id/txtMailUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/string_mail_usuario"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:text="Juan"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <EditText
+        android:id="@+id/txtPasswrdlUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/string_passwrd_login"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:text="Juannnnn"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <EditText
+        android:id="@+id/txtRepitPasswrdlUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/string_repit_passwrd_login"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Juannnnn"
+        android:singleLine="true"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/edit_text_border"/>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chkTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/string_terminos"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMsgError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrect_passwrd"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#CD6363"
+        android:visibility="invisible"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:autoLink="phone"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="@string/button_singup"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_login"/>
+
+</LinearLayout>
