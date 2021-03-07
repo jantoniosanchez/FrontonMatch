@@ -8,10 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.android.volley.AuthFailureError
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.example.proyecto_diego.Adapter.TorneosAdapter
 import com.example.proyecto_diego.Objetos.Torneos
 import com.example.proyecto_diego.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import org.json.JSONArray
 
 class InfoTournament : Fragment() {
 
@@ -35,12 +39,12 @@ class InfoTournament : Fragment() {
 
     fun iniValues(view: View){
         btnAdd = view.findViewById(R.id.btnAdd)
-        loadRecycler(view)
+
+        getTournament(view)
 
         btnAdd.setOnClickListener {
             openAddTournament()
         }
-
     }
 
     /*fun openAddTournament(){
@@ -66,24 +70,51 @@ class InfoTournament : Fragment() {
     fun loadRecycler(view: View){
         mRecyclerView = view.findViewById(R.id.rvTorneos)
         mRecyclerView.layoutManager = LinearLayoutManager(activity)
-
-        llenarLista()
-
+        println(listaTorneos.size)
         val torneosAdapter: TorneosAdapter = TorneosAdapter(listaTorneos)
         mRecyclerView.adapter = torneosAdapter
 
     }
 
-    fun llenarLista(){
-        var torneos: Torneos = Torneos(1,"","",3,5,"Cordillera","Guadalupe","0","0")
-        var torneos2: Torneos = Torneos(1,"","",3,5,"Cordillera","Guadalupe","2","10")
-        var torneos3: Torneos = Torneos(1,"","",3,5,"Cordillera","Guadalupe","100","100")
-        listaTorneos.add(torneos)
-        listaTorneos.add(torneos2)
-        listaTorneos.add(torneos3)
+    fun getTournament(view: View){
+        listaTorneos.clear()
+        val url = "http:192.168.0.5/Proyecto_Diego/web_service.php"
+        val queue = Volley.newRequestQueue(getContext())
+        val request = object : StringRequest(Method.POST, url, { response ->
+            var jsonArray: JSONArray = JSONArray(response)
+
+            for(i in 0 until jsonArray.length()){
+                val id = jsonArray.getJSONObject(0).get("PK_ID").toString().toInt()
+                val tiempoSet = jsonArray.getJSONObject(0).get("FK_USUARIO").toString()
+                val tiempoPartido = jsonArray.getJSONObject(0).get("NUM_TIEMPO_PARTIDO").toString()
+                val numeroPartido = jsonArray.getJSONObject(0).get("NUM_TIEMPO_SET").toString().toInt()
+                val numeroSet = jsonArray.getJSONObject(0).get("NUM_SET").toString().toString().toInt()
+                val primerEquipo = jsonArray.getJSONObject(0).get("DES_PRIMER_EQUIPO").toString()
+                val segundoEquipo = jsonArray.getJSONObject(0).get("DES_SEGUNDO_EQUIPO").toString()
+                val resultadoPrimerEquipo = "10"
+                val resultadoSegundoEquipo = "0"
+
+                var torneos: Torneos = Torneos(id,tiempoSet,tiempoPartido,numeroPartido,numeroSet,primerEquipo,segundoEquipo,resultadoPrimerEquipo,resultadoSegundoEquipo)
+                listaTorneos.add(torneos)
+            }
+
+            loadRecycler(view)
+
+        }, { error ->
+            println(error.message)
+
+        }){
+            override fun getParams(): Map<String, String> {
+                var paramas: MutableMap<String, String> = HashMap()
+
+                paramas["funcion"] = "3"
+                paramas["parametro1"] = "1"
+
+                return paramas
+            }
+        }
+        queue.add(request)
+
     }
-
-
-
 
 }
